@@ -7,10 +7,12 @@ import scraperStories from "./src/scraper/scraper.js";
 import storyRouter from "./src/routes/scrape.route.js";
 import { scrapStoriesInternal } from "./src/controllers/story.controller.js";
 import userRouter from "./src/routes/user.routes.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 const allowOrigin = ["http://localhost:5173", ""];
 app.use(
