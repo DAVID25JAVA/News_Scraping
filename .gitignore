@@ -51,7 +51,6 @@ frontend/.env.*
 # ========================
 *.wt
 *.lock
-db/
 data/
 mongodb-data/
 
