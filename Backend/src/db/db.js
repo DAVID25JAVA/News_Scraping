@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ConnectDB = async (req, res) => {
+const ConnectDB = async () => {
   try {
     const connect = await mongoose.connect(
       `${process?.env?.MONGODB_URI}/News-Scrape`

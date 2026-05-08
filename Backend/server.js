@@ -3,26 +3,42 @@ import dotenv from "dotenv";
 dotenv.config();
 import ConnectDB from "./src/db/db.js";
 import cors from "cors";
+import scraperStories from "./src/scraper/scraper.js";
+import storyRouter from "./src/routes/scrape.route.js";
+import { scrapStoriesInternal } from "./src/controllers/story.controller.js";
+import userRouter from "./src/routes/user.routes.js";
 
 const app = express();
-await ConnectDB();
 
 app.use(express.json());
 
 const allowOrigin = ["http://localhost:5173", ""];
 app.use(
   cors({
-    allowOrigin: allowOrigin,
+    origin: allowOrigin,
     credentials: true,
   })
 );
 
-app.get((req, res) => {
-  res.send(`API working fine......`);
-});
+// Story API----->
+app.use("/api", storyRouter);
+// Auth API---->
+app.use("/api/auth", userRouter)
 
-const PORT = process?.env?.PORT || 4000;
+const startServer = async () => {
+  await ConnectDB();
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+  const PORT = process?.env?.PORT || 4000;
+
+  app.listen(PORT, async () => {
+    console.log(`Server is running on port ${PORT}`);
+
+    try {
+      await scrapStoriesInternal();
+    } catch (error) {
+      console.error("Initial scrape failed:", error.message);
+    }
+  });
+};
+
+startServer();
