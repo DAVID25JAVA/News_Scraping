@@ -1,4 +1,4 @@
-// src/components/Footer.jsx
+
 
 import Wrapper from "./Wrapper";
 

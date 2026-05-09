@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Button from "./ui/Button";
+import Button from '../components/UI/Button'
 import { getStories } from "../services/story.service";
 import toast from "react-hot-toast";
 import Loading from "./UI/Loading";

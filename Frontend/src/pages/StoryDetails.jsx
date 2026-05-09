@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import moment from "moment";
 import toast from "react-hot-toast";
-// import {Bookmark} from 'lucide-react'
 import {
   Bookmark,
   BookmarkCheck,

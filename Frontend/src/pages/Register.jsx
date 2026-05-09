@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
+import Input from '../components/UI/Input'
+import Button from '../components/UI/Button'
 import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
 

@@ -1,4 +1,3 @@
-// src/components/Wrapper.jsx
 
 function Wrapper({ children }) {
   return (

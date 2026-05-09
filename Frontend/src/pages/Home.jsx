@@ -1,7 +1,7 @@
 import Wrapper from "../components/Wrapper";
 import StoryCard from "../components/StoryCard";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
+import Input from '../components/UI/Input'
+import Button from '../components/UI/Button'
 
 function Home() {
   return (
