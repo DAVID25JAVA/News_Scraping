@@ -3,6 +3,8 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import StoryDetails from "./pages/StoryDetails";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -11,10 +13,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="/bookmarks" element={<Bookmarks />} /> */}
+        <Route path="/story-details/:id" element={<StoryDetails />} />
       </Route>
 
-      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

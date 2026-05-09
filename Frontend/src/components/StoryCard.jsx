@@ -4,6 +4,7 @@ import { getStories } from "../services/story.service";
 import toast from "react-hot-toast";
 import Loading from "./UI/Loading";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 function StoryCard() {
   const [stories, setStories] = useState([]);
@@ -26,8 +27,6 @@ function StoryCard() {
   useEffect(() => {
     fetchStories();
   }, [page]);
-
-  console.log("Stories--->", stories);
 
   return (
     <div className="space-y-6">
@@ -66,7 +65,12 @@ function StoryCard() {
                 </a>
               </div>
 
-              <Button className="whitespace-nowrap">View</Button>
+              <Link
+                to={`/story-details/${story?._id}`}
+                className="bg-black text-white px-5 py-2 rounded-xl"
+              >
+                View
+              </Link>
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-gray-500 border-t pt-5">
