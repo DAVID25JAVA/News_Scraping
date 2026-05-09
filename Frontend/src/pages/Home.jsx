@@ -82,10 +82,6 @@ function Home() {
         <section className="pb-14">
           <div className="grid grid-cols-1 gap-7">
             <StoryCard />
-            <StoryCard />
-            <StoryCard />
-            <StoryCard />
-            <StoryCard />
           </div>
         </section>
 
