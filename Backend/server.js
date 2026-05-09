@@ -14,7 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowOrigin = ["http://localhost:5173", "https://news-scraping-us8b.vercel.app"];
+const allowOrigin = [
+  "http://localhost:5173",
+  "https://news-scraping-psf1.vercel.app",
+];
 app.use(
   cors({
     origin: allowOrigin,
@@ -25,7 +28,7 @@ app.use(
 // Story API----->
 app.use("/api", storyRouter);
 // Auth API---->
-app.use("/api/auth", userRouter)
+app.use("/api/auth", userRouter);
 
 const startServer = async () => {
   await ConnectDB();
