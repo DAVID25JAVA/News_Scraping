@@ -1,37 +1,49 @@
-// src/pages/Login.jsx
-
+import { Link } from "react-router-dom";
 import Wrapper from "../components/Wrapper";
-import Input from "../components/ui/Input";
-import Button from "../components/ui/Button";
 
 function Login() {
   return (
     <Wrapper>
       <div className="min-h-[80vh] flex items-center justify-center">
-        <div className="w-full max-w-md bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
-          <h1 className="text-4xl font-bold text-center mb-2">
-            Welcome Back
+
+        <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
+
+          <h1 className="text-3xl font-bold mb-6">
+            Login
           </h1>
 
-          <p className="text-center text-gray-500 mb-8">
-            Login to continue
+          <form className="space-y-4">
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full border p-3 rounded-lg"
+            />
+
+            <input
+              type="password"
+              placeholder="Password"
+              className="w-full border p-3 rounded-lg"
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-black text-white py-3 rounded-lg"
+            >
+              Login
+            </button>
+          </form>
+
+          {/* REGISTER LINK */}
+          <p className="text-sm text-center mt-4 text-gray-600">
+            Don’t have an account?{" "}
+            <Link
+              to="/register"
+              className="text-blue-600 font-semibold"
+            >
+              Register
+            </Link>
           </p>
 
-          <form className="space-y-5">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-            />
-
-            <Input
-              type="password"
-              placeholder="Enter your password"
-            />
-
-            <Button className="w-full">
-              Login
-            </Button>
-          </form>
         </div>
       </div>
     </Wrapper>

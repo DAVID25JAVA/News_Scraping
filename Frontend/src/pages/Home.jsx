@@ -142,7 +142,7 @@ function Home() {
         {/* CTA */}
 
         <section className="pb-16">
-          <div className="bg-gradient-to-r from-black to-gray-900 rounded-[35px] p-10 lg:p-16 text-white relative overflow-hidden">
+          <div className="bg-linear-to-r from-black to-gray-900 rounded-[35px] p-10 lg:p-16 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-80 h-80 bg-yellow-400/10 rounded-full blur-3xl"></div>
 
             <div className="relative z-10 max-w-3xl">
