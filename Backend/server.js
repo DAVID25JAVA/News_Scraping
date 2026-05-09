@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-const allowOrigin = ["http://localhost:5173", ""];
+const allowOrigin = ["http://localhost:5173", "https://news-scraping-us8b.vercel.app"];
 app.use(
   cors({
     origin: allowOrigin,
